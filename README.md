@@ -6,6 +6,8 @@ Coral reef oases are consistently associated with high light attenuation
 
 Robin Elahi, Peter J. Edmunds, Ruth D. Gates, Ilsa B. Kuffner, Brian B. Barnes, Iliana Chollett, Travis A. Courtney, James R. Guest, Elizabeth A. Lenz, Lauren T. Toth, T. Shay Viehman, Ivor D. Williams
 
+In review at Ecological Applications. 
+
 Email elahi at stanford.edu with questions
 
 ## Overview of folders in this repository
