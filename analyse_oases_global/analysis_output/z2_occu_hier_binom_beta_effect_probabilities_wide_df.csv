@@ -1,0 +1,18 @@
+"","variable","Direction","Cross-basin","Basin","Region","Sub-region"
+"1","Human population density","Negative",0.961,0.843,0.782,0.967
+"2","Light attenuation (cv)","Negative",0.598,NA,0.761,0.76
+"3","Light attenuation (cv)","Positive",NA,0.625,NA,NA
+"4","Light attenuation (mean)","Positive",0.891,1,1,1
+"5","Storms","Negative",0.846,0.566,0.579,NA
+"6","Storms","Positive",NA,NA,NA,0.559
+"7","Primary productivity (cv)","Negative",0.715,0.773,0.611,0.819
+"8","Primary productivity (mean)","Negative",0.607,NA,NA,NA
+"9","Primary productivity (mean)","Positive",NA,0.728,0.692,0.595
+"10","SST (cv)","Negative",0.875,0.846,NA,NA
+"11","SST (cv)","Positive",NA,NA,0.995,0.886
+"12","SST (mean)","Negative",NA,NA,NA,0.596
+"13","SST (mean)","Positive",NA,NA,1,NA
+"14","Wave energy (cv)","Negative",0.967,0.796,0.595,NA
+"15","Wave energy (cv)","Positive",NA,NA,NA,0.797
+"16","Wave energy (mean)","Negative",0.601,NA,0.758,NA
+"17","Wave energy (mean)","Positive",NA,0.503,NA,0.624
