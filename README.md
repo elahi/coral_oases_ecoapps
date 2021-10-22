@@ -37,6 +37,10 @@ Email elahi at stanford.edu with questions
 
   - df_samples.csv: summary table of sample sizes associated with each spatial scale
 
+### ignore_folder (ignored on github due to large size)
+
+  - model_rds: MCMC results from JAGS models 
+  
 ### kml
 
   - kml files for Florida map
