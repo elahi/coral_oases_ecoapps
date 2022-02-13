@@ -35,9 +35,6 @@ statDat$JURISDICTION <- fct_relevel(statDat$JURISDICTION,
 df_samples <- statDat %>% 
   count(OCEAN, JURISDICTION, REGION) %>% 
   mutate(Ocean = OCEAN, Jurisdiction = JURISDICTION, `Sub-jurisdiction` = REGION)
-df_samples
-
-write.csv(df_samples, "data_output/df_samples.csv")
 
 ##### VISUALISE DISTRIBUTIONS OF PREDICTORS #####
 sdl <- statDat %>% 
