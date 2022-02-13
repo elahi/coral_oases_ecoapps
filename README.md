@@ -6,7 +6,7 @@ Coral reef oases are consistently associated with high light attenuation
 
 Robin Elahi, Peter J. Edmunds, Ruth D. Gates, Ilsa B. Kuffner, Brian B. Barnes, Iliana Chollett, Travis A. Courtney, James R. Guest, Elizabeth A. Lenz, Lauren T. Toth, T. Shay Viehman, Ivor D. Williams
 
-In review at Ecological Applications. 
+In press at Ecological Applications. 
 
 Email elahi at stanford.edu with questions
 
@@ -21,10 +21,8 @@ Email elahi at stanford.edu with questions
   - analysis_output: summary tables of analyses
   
   - map_cell_probs: maps of oasis occurrence probabilities for Florida (Figure 6)
-  
-  - covariates_subjurisdiction: plots of covariates at the subjurisdictional scale
-  
-  - map_covariates: example maps of covariates
+    
+  - map_subregions: maps of oasis occurrence probabilities for all subregions
   
   - model output
     - model_summaries: summaries of MCMC iterations
@@ -33,7 +31,7 @@ Email elahi at stanford.edu with questions
     
   - model_rds: JAGS output, saved as RDS file
   
-  - models: hierarchical occupancy model, written for JAGS
+  - models: model matrices and hierarchical occupancy model, written for JAGS
 
 ### data_output
 
@@ -54,6 +52,10 @@ Email elahi at stanford.edu with questions
 ### R
 
   - accessory R scripts 
+  
+### sandbox
+
+  - old scripts and figures not used in manuscript
   
 ### workspace
 

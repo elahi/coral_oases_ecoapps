@@ -97,77 +97,9 @@ fit_df_long %>%
   theme(legend.justification = c(1, 1), legend.position = c(1, 1), 
         legend.background = element_blank()) 
 
-ggsave(paste(path_to_figs, "FIG_model_null_ncells_boxplot.pdf", sep = ""), 
+ggsave(paste(path_to_figs, "model_null_ncells_boxplot.pdf", sep = ""), 
        height = 3.5, width = 4)
 
 fit_df_long %>% 
   group_by(null_or_model, scale) %>% 
   summarise(median = median(percent_success))
-
-#### RATIO ####
-
-fit_df %>% 
-  ggplot(aes(y = scale, x = model_null_ratio)) + 
-  stat_halfeye(.width = c(0.8, 0.95), 
-               aes(fill = stat(cut_cdf_qi(cdf, .width = c(0.8, 0.95), 
-                                     labels = scales::percent_format())))) +
-  scale_fill_brewer(direction = -1, na.translate = FALSE) + 
-  geom_vline(xintercept = 1, linetype = "dashed", color = "black", alpha = 0.4) + 
-  coord_cartesian(xlim = c(0.5, 4.5)) + 
-  labs(x = "Ratio of oasis detection (model / null)", 
-       y = "Spatial extent", 
-       fill = "Interval") +
-  theme(legend.position = c(0.95, 0.05), 
-        legend.justification = c(1,0), 
-        legend.title = element_blank())
-
-fit_df %>% 
-  ggplot(aes(y = scale, x = model_null_ratio)) + 
-  stat_halfeye(.width = c(0.8, 0.95), 
-               aes(fill = stat(x > 1))) +
-  scale_fill_manual(values = c("gray85", "skyblue")) +
-  geom_vline(xintercept = 1, linetype = "dashed", color = "black", alpha = 0.4) + 
-  coord_cartesian(xlim = c(0.5, 4.5)) + 
-  labs(x = "Ratio of oasis detection (model / null)", 
-       y = "Spatial extent", 
-       fill = "Ratio > 1") +
-  theme(legend.position = c(0.95, 0.05), 
-        legend.justification = c(1,0))
-
-ggsave(paste(path_to_figs, "model_null_ncells_ratio.pdf", sep = ""), 
-       height = 3.5, width = 4)
-
-#### LOG RATIO ####
-
-fit_df %>% 
-  ggplot(aes(y = scale, x = lrr)) + 
-  stat_halfeye(.width = c(0.8, 0.95), 
-               aes(fill = stat(cut_cdf_qi(cdf, .width = c(0.8, 0.95), 
-                                          labels = scales::percent_format())))) +
-  scale_fill_brewer(direction = -1, na.translate = FALSE) + 
-  geom_vline(xintercept = 0, linetype = "dashed", color = "black", alpha = 0.4) + 
-  coord_cartesian(xlim = c(-0.5, 1.5)) + 
-  labs(x = "Log ratio of oasis detection (model / null)", 
-       y = "Spatial extent", 
-       fill = "Interval") +
-  theme(legend.position = c(0.95, 0.05), 
-        legend.justification = c(1,0), 
-        legend.title = element_blank())
-
-fit_df %>% 
-  ggplot(aes(y = scale, x = lrr)) + 
-  stat_halfeye(.width = c(0.8, 0.95), 
-               aes(fill = stat(x > 0))) +
-  scale_fill_manual(values = c("gray85", "skyblue")) +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "black", alpha = 0.4) + 
-  coord_cartesian(xlim = c(-0.4, 1.5)) + 
-  labs(x = "Log ratio of oasis detection (model / null)", 
-       y = "Spatial extent", 
-       fill = "Log ratio > 0") +
-  theme(legend.position = c(0.975, 0.025), 
-        legend.justification = c(1,0))
-
-ggsave(paste(path_to_figs, "model_null_ncells_logratio.pdf", sep = ""), 
-       height = 3.5, width = 4)
-
-

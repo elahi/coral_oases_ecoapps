@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name><![CDATA[Marine Zones]]></name>
+  <open>1</open>
+  <Snippet maxLines="2"></Snippet>
+	<description><![CDATA[This data set contains the boundaries for marine zones in the Florida Keys National Marine Sanctuary.
+<br>
+<table cellspacing="0" cellpadding="0" width="500" border="0">
+ <tbody>
+  <tr height="65 valign="center">
+   <td>
+    <a href="http://www.epa.gov/Region4/water/southflorida/index.html"><img alt="EPA Logo" src="files/EPA_Logo_60.gif" border="0"></a>
+   </td>
+   <td valign="center">
+    <a href="http://floridakeys.noaa.gov/"><img alt="NOAA Logo" src="files/NOAA_Logo_60.gif" border="0"></a>
+   </td>
+   <td valign="center">
+    <a href="http://serc.fiu.edu/wqmnetwork/"><img alt="FIU Logo" src="files/fiu_logo.gif" border="0"></a>
+   </td>
+   </td>
+   <td valign="center">
+    <a href="http://research.myfwc.com"><img alt="FWC Logo" src="files/FWC_logo_60.gif" border="0"></a>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</table>
+<table cellspacing="0" cellpadding="4" width="500" border="0" bgcolor="#C7EAFB">
+  <tr>
+    <td>
+     <a href="http://ocean.floridamarine.org/fknms_wqpp/products/metadata/marine_zones.htm" target="_blank">View Metadata</a>
+     <br>
+   </td>
+  </tr>
+  <tr>
+    <td>
+Marine zoning is a new concept in this country, although zoning has been used for years on land to both protect resources and separate conflicting uses. Marine zoning has been successfully established in other countries.<br>
+<br>
+Zoning provides a common sense approach to focus protection in critical portions of sensitive habitats, while not restricting activities any more than necessary. Zoning protects the majority of shallow reef habitat while minimizing the effect on commercial and recreational fishing. By using marine zoning to protect critical habitat, the coral reefs will be enhanced in many ways. In the remaining 98% of the Sanctuary that is not zoned, the focus of management is on improving water quality and providing habitat protection.<br>
+<br>
+Sanctuary Preservation Areas (SPAs)
+There are 18 small SPAs that protect popular shallow coral reefs. In addition to Sanctuary-wide regulations, special regulations have been set in place in these areas in order to protect resources. Activities that will be prohibited in the Sanctuary Preservation Areas include spearfishing, shell collecting, tropical fish collecting, fishing and other activities that result in the harvest of marine life by divers, snorkelers, and fishermen. In addition, direct physical impact to corals in these areas is restricted.<br>
+<br>
+Western Sambos Ecological Reserve
+In addition to Sanctuary-wide regulations, special regulations have been set in place in this area in order to protect resources. Spearfishing, shell collecting, tropical fish collecting, and other activities that result in the harvest of marine life by divers and snorkelers, and all fishing activities will be prohibited in this zone type. In addition, direct physical impact to corals in this area is restricted.<br>
+<br>
+Special Use Areas
+There are four areas designated: Conch Reef, Tennessee Reef, Looe Key (patch reef), and Eastern Sambo Reef. These are all designated as research-only areas. No person may enter these areas except as specifically authorized by a valid permit.<br>
+<br>
+More information about marine zones in the Sanctuary can be found at <a href="http://floridakeys.noaa.gov/regs/welcome.html">http://floridakeys.noaa.gov/regs/welcome.html</a><br>
+</td>
+</tr>
+</table>
+]]></description>
+  <Style id="FEATURES">
+    <LineStyle>
+      <color>FF00f2ff</color>
+      <width>2</width>
+    </LineStyle>
+    <PolyStyle>
+      <outline>1</outline>
+      <fill>0</fill>
+      <color>FFF2D4BD</color>
+    </PolyStyle>
+    <BalloonStyle>
+      <text>
+<![CDATA[]]>
+      </text>
+    </BalloonStyle>
+  </Style>
+  <Style id="FEATURES_LABELS">
+    <IconStyle>
+      <color>00000000</color>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+      </Icon>
+    </IconStyle>
+    <LabelStyle>
+      <scale>.7</scale>
+      <color>FF00f2ff</color>
+    </LabelStyle>
+  </Style>
+  <Folder>
+    <name>Features</name>
+    <open>0</open>
+       <Placemark>
+         <name><![CDATA[Alligator Reef]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.6272167560613,24.8469104361888,0
+               -80.6225728296576,24.8418524016982,0
+               -80.6139652972789,24.849631717903,0
+               -80.6194374398565,24.8538911153688,0
+               -80.6272167560613,24.8469104361888,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Carysfort/South Carysfort]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.2131049883476,25.2355514567006,0
+               -80.2295729376167,25.2040419159731,0
+               -80.2165412139824,25.1980771469465,0
+               -80.2000084302674,25.2297163565659,0
+               -80.2131049883476,25.2355514567006,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Cheeca Rocks]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.6191597202504,24.9036675795949,0
+               -80.6166249694292,24.9015910888093,0
+               -80.6128156828845,24.9042260840132,0
+               -80.6151929068184,24.9070615679825,0
+               -80.6191597202504,24.9036675795949,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Coffins Patch]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.9747131654075,24.6843480641757,0
+               -80.9722395687224,24.6792063182573,0
+               -80.9588988225556,24.6853486201382,0
+               -80.9613724192407,24.6910740237015,0
+               -80.9747131654075,24.6843480641757,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Conch Reef]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.4578037553427,24.9579315259286,0
+               -80.4622458904507,24.9492522773329,0
+               -80.4586466220042,24.9462680737476,0
+               -80.4544095085165,24.9556535079245,0
+               -80.4578037553427,24.9579315259286,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Conch Reef (Research Only)]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.4544095085165,24.9556535079245,0
+               -80.4570292292213,24.949821781834,0
+               -80.454090585996,24.9471109404091,0
+               -80.4488511445865,24.9516214160572,0
+               -80.4544095085165,24.9556535079245,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Davis Reef]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.5086796507254,24.9223679001554,0
+               -80.5058028485872,24.9184030766958,0
+               -80.5008606500422,24.9235112445949,0
+               -80.5044750937542,24.9267937495987,0
+               -80.5086796507254,24.9223679001554,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Eastern Dry Rocks]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.84758210281,24.461978047177,0
+               -81.8465369898758,24.4577500903068,0
+               -81.8388411582694,24.4621839027549,0
+               -81.8424515484057,24.4652717364242,0
+               -81.84758210281,24.461978047177,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Eastern Sambo (Research Only)]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.6672512637722,24.4961369591471,0
+               -81.6667230305737,24.4897070860768,0
+               -81.656067291916,24.4923846819446,0
+               -81.6598742139322,24.4973027151712,0
+               -81.6672512637722,24.4961369591471,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[French Reef]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.3545670272792,25.0392786361445,0
+               -80.3503946982178,25.0302254693131,0
+               -80.3439393966511,25.0366807708799,0
+               -80.3545670272792,25.0392786361445,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Grecian Rocks]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.3073194219777,25.1135333291622,0
+               -80.3080090617239,25.1069565208515,0
+               -80.3053850665922,25.1065191883295,0
+               -80.3009612799279,25.1111784617364,0
+               -80.303265685909,25.1151312749155,0
+               -80.3073194219777,25.1135333291622,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Hen and Chickens]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.5531719342413,24.9339376772888,0
+               -80.5492409852457,24.9309943066122,0
+               -80.5438383509118,24.9368423194038,0
+               -80.5476143856613,24.9396307758342,0
+               -80.5531719342413,24.9339376772888,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Key Largo Dry Rocks]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.3015078280276,25.1234962109534,0
+               -80.2970481754874,25.1207885647683,0
+               -80.2950572591748,25.1234298470764,0
+               -80.2984949080079,25.1264958581977,0
+               -80.3015078280276,25.1234962109534,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Looe Key]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.4134710660818,24.551925773323,0
+               -81.4116414149513,24.5420290240262,0
+               -81.3975863676307,24.5450229986034,0
+               -81.400552620221,24.5539772003481,0
+               -81.4134710660818,24.551925773323,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Looe Key (Research Only)]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.3946384510045,24.5705463501223,0
+               -81.3933803839857,24.5640733923962,0
+               -81.3826259401147,24.5662445725739,0
+               -81.3835593446771,24.5694506143317,0
+               -81.3946384510045,24.5705463501223,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Molasses Reef]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.3806244031157,25.0119616892706,0
+               -80.3783414306104,25.0048766021851,0
+               -80.3707840043859,25.0105446718535,0
+               -80.3640138100598,25.017629758939,0
+               -80.3756648421559,25.0166850806609,0
+               -80.3806244031157,25.0119616892706,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Newfound Harbor Key]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.3977167196055,24.6166386132579,0
+               -81.3937271005671,24.6136135175036,0
+               -81.3881007147437,24.6141542351022,0
+               -81.3890944660061,24.618377677967,0
+               -81.3977167196055,24.6166386132579,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Rock Key]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.8608293506192,24.4574820335093,0
+               -81.8599446779497,24.4534547922525,0
+               -81.8525768070601,24.4549996684067,0
+               -81.8558778244837,24.4581686451334,0
+               -81.8608293506192,24.4574820335093,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Sand Key]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.8824144774554,24.4601354636655,0
+               -81.8825758203345,24.4503742194855,0
+               -81.8719271903199,24.4502128766065,0
+               -81.8715440009822,24.459732106468,0
+               -81.8824144774554,24.4601354636655,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Sombrero Key]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.1129939271541,24.6317974560309,0
+               -81.1148883650215,24.620904438293,0
+               -81.1032586214463,24.6249301187613,0
+               -81.1129939271541,24.6317974560309,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Tennessee Reef (Research Only)]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.7595686481643,24.7649499045447,0
+               -80.7574862516044,24.7615709214476,0
+               -80.7483905005928,24.766384007836,0
+               -80.7511604809225,24.7700380244411,0
+               -80.7595686481643,24.7649499045447,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[The Elbow]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -80.2678083636956,25.1416885876778,0
+               -80.2607035908935,25.136366865965,0
+               -80.2536811127571,25.1492048338082,0
+               -80.2604567068965,25.14942428625,0
+               -80.2678083636956,25.1416885876778,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[Western Sambo Ecological Reserve]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -81.7183713449658,24.5583227563105,0
+               -81.7284397845108,24.4750564154193,0
+               -81.6987135304006,24.480741764566,0
+               -81.6857184466366,24.535808432016,0
+               -81.6800190581793,24.561687800704,0
+               -81.6806413609096,24.5613881734635,0
+               -81.6819320628688,24.5609963532259,0
+               -81.6825082691005,24.5604201469941,0
+               -81.6846517562827,24.558875914293,0
+               -81.6855736862535,24.5584610458061,0
+               -81.6868187027117,24.559151742767,0
+               -81.6877171734357,24.5601205197536,0
+               -81.6880168006762,24.5602588092492,0
+               -81.6884659941567,24.5600538309393,0
+               -81.6888747077324,24.5602776502784,0
+               -81.6891692131398,24.560235761,0
+               -81.689699322873,24.5599130855102,0
+               -81.6899298053657,24.5599130855102,0
+               -81.6901696131684,24.5597758099917,0
+               -81.6903446738526,24.5598669890116,0
+               -81.6905290598468,24.5596365065189,0
+               -81.693871055991,24.5595212652726,0
+               -81.6950004202053,24.5597056512667,0
+               -81.6970978108889,24.5594521205247,0
+               -81.6984346093466,24.5594290722755,0
+               -81.6991542269072,24.5592986484522,0
+               -81.6995178770623,24.5591524932842,0
+               -81.6999096972999,24.5588067695452,0
+               -81.7010851580128,24.5582536115627,0
+               -81.7015922194967,24.5583458045598,0
+               -81.7019379432358,24.5580922738178,0
+               -81.7026063424646,24.5580000808207,0
+               -81.7044041059077,24.5580461773192,0
+               -81.7054873736235,24.5579309360729,0
+               -81.705844863749,24.5575850571389,0
+               -81.7081840187882,24.5569859578528,0
+               -81.7088293697677,24.5569398613542,0
+               -81.7092442382546,24.5567785236093,0
+               -81.7092442382546,24.5566863306122,0
+               -81.7094977689966,24.5567093788615,0
+               -81.7096821549908,24.5566171858644,0
+               -81.7098665409849,24.5567093788615,0
+               -81.7100278787298,24.5564327998703,0
+               -81.7110420016977,24.5562714621254,0
+               -81.7119869799178,24.5562945103746,0
+               -81.712517089651,24.5565019446181,0
+               -81.7133929231233,24.5565249928674,0
+               -81.7138999846073,24.556663282363,0
+               -81.7141074188507,24.5566171858644,0
+               -81.7147366726403,24.5568511438868,0
+               -81.7150523970708,24.5567324271108,0
+               -81.7156284401373,24.5568372190228,0
+               -81.7164463280424,24.5569226745852,0
+               -81.7174398969802,24.5572759435409,0
+               -81.7179698004137,24.558247433169,0
+               -81.7183713449658,24.5583227563105,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[1]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -82.9666659996095,24.6499999692224,0
+               -82.9000000067236,24.7166659815608,0
+               -82.866665993063,24.7254999840603,0
+               -82.7999999944747,24.7254999693152,0
+               -82.8000000040218,24.7633329707135,0
+               -82.9000000085144,24.7666659795056,0
+               -83.0999999987376,24.7666659686081,0
+               -83.1000000051606,24.6499999756345,0
+               -82.9666659996095,24.6499999692224,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[2]]></name>
+         <Snippet maxLines="2"></Snippet>
+         <styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -83.0833330025057,24.2999999843494,0
+               -83.083333002454,24.5499999809446,0
+               -83.1499999978764,24.5499999833781,0
+               -83.1499999941615,24.2999999715923,0
+               -83.0833330025057,24.2999999843494,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+
+  </Folder>
+  <Folder>
+    <name>Feature Labels</name>
+    <open>0</open>
+      <Placemark>
+        <name><![CDATA[Alligator Reef]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.6207578881898,24.8480272918684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[CARYSFORT/SOUTH CARYSFORT]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.2148027079014,25.216844239312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[CHEECA ROCKS]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.6159281703651,24.9042004477427,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[COFFINS PATCH]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.9667114410878,24.6850488769621,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[CONCH REEF]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.4583047119332,24.9521804503707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[CONCH REEF (RESEARCH ONLY)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.4533885189317,24.9512555192371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[DAVIS REEF]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.5049086000009,24.9227278421264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[EASTERN DRY ROCKS]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.8437381853179,24.4617086711981,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[EASTERN SAMBO (RESEARCH ONLY)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.6625070724888,24.4936746411376,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[FRENCH REEF]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.3496337073827,25.0353949587792,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[GRECIAN ROCKS]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.3049087752827,25.1108224332363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[HEN AND CHICKENS]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.5484860966131,24.9353282174887,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[KEY LARGO DRY ROCKS]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.2981278348378,25.1235843971535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[LOOE KEY]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.4058764849946,24.5481466892142,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[LOOE KEY (RESEARCH ONLY)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.3891579128193,24.5675335077246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[MOLASSES REEF]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.3738438317549,25.0124631597208,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[NEWFOUND HARBOR KEY]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.3921539359268,24.6158588717404,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[ROCK KEY]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.8572867640931,24.4558880564715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[SAND KEY]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.8771368421956,24.4551313042864,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[SOMBRERO KEY]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.1103803045407,24.6258773376951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[TENNESSEE REEF (RESEARCH ONLY)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.754044146468,24.765779754312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[THE ELBOW]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -80.2607066745894,25.1437078270416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[WESTERN SAMBO ECOLOGICAL RESERVE]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -81.7062077687151,24.5200268636881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[TORTUGAS ECOLOGICAL RESERVE (SOUTH)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -83.116666667,24.416666667,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[TORTUGAS ECOLOGICAL RESERVE (NORTH)]]></name>
+        <styleUrl>#FEATURES_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -82.966666667,24.7333333333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+  </Folder>
+</Document>
+</kml>
