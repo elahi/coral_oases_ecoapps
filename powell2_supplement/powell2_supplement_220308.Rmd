@@ -1,0 +1,267 @@
+---
+biblio-style: apsr
+#bibliography: ~/github/powell2/powell2_supplement/master.bib
+#csl: frontiers-in-ecology-and-the-environment.csl
+endnote: no
+fontfamily: mathpazo
+fontsize: 12pt
+geometry: margin=1in
+output:
+  pdf_document:
+    fig_caption: no
+    keep_tex: no
+    latex_engine: pdflatex
+  word_document: default
+header-includes:
+    - \usepackage{lineno}
+    - \linenumbers  
+    - \usepackage{setspace}\doublespacing
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE, cache = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      fig.path = 'figs/', cache.path = 'cache/graphics-', 
+                      fig.align = 'center', fig.width = 5, fig.height = 5, 
+                      fig.show = 'hold', cache = FALSE, par = TRUE)
+knitr::opts_knit$set(root.dir = "../")
+```
+
+```{r r_packages}
+library(tidyverse)
+library(knitr)
+library(rethinking)
+inverse_logit <-function(x) return(exp(x)/(1 + exp(x)))
+```
+
+**Supporting Information**. Elahi, R., Edmunds, P.J., Gates, R.D., Kuffner, I.B., Barnes, B.B., Chollett, I., Courtney, T.A., Guest, J.R., Lenz, E.A., Toth, L.T., Viehman, T.S., Williams, I.D. 2022. Coral reef oases are consistently associated with high light attenuation. Ecological Applications.
+
+### Appendix S2. 
+
+Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.
+
+\newpage
+
+### Section S1. Statistical Model
+
+We were interested in understanding the probability of occurrence of coral reef oases, and in particular, how environmental covariates mediated their probability of occurrence. As stated in the *Methods*, we defined an oasis as a reef site that exhibited higher coral cover relative to reef sites within a defined area. These areas were divided into 2.5 arcminute grid cells (~21.2 km^2^), and individual sites (< 100 m^2^) were sampled within these grid cells. The probability of occurrence can be separated into the true probability of occurrence of an oasis ($\psi$), and the probability of detecting an oasis ($p$). The true probability of occurrence ($\psi$) was modeled using a deterministic equation with the pertinent environmental covariates, and the detection probability ($p$) was modeled using a binomial distribution with the number of trials (sampled reefs) and successes (oases). Our modeling approach is based on species occupancy models (Mackenzie et al. 2002), which estimate species occupancy (i.e., occurrence) when detection probabilities are less than one. 
+
+Our data set was the number of oases ($y_{ij}$) observed in a given cell *i* nested within sub-region *j*, given $n_{ij}$ sampling occasions. We wished to predict the true probability of occurrence of an oasis for cell *i*. We defined the unobserved, true state of cell *i* as $z_{ij}$ = 1 if it had an oasis, and $z_{ij}$ = 0 if it did not. Then we modeled the data $y_{ij}$, the number of times we observed an oasis given $n_{ij}$ sampling occasions as: 
+
+$$
+\begin{aligned}
+y_{ij} \sim
+  \begin{cases}
+    0, ~ \text{if} ~ z_{ij} = 0 \\
+    \text{Binomial}(n_{ij}, p_j), ~ \text{if} ~ z_{ij} = 1 \\
+  \end{cases}
+\end{aligned}
+$$
+
+which states that we will never detect an oasis site if the cell does not have one, but if the cell does have an oasis, we will detect it with probability $p_j$, estimated as a group-level intercept for sub-region $j$, designated as $h(\eta_j)$ below. 
+
+Next, we modeled the process governing the true state $z_{ij}$:
+
+$$
+\begin{aligned}
+z_{ij} \sim & ~ \text{Bernoulli}(\psi_{ij}) \\
+\end{aligned}
+$$
+
+We used a Bernoulli distribution because the random variable $z_{ij}$ can take on values of 0 or 1. The frequency of these values is determined by the true probability of occurrence, $\psi_{ij}$. We modeled $\psi_{ij}$ using a deterministic model, $g(\alpha_j, \boldsymbol{\beta}, \boldsymbol{x}_{ij})$, where $\alpha_j$ represented an intercept for sub-region $j$, $\boldsymbol{\beta}$ represented a vector of coefficients, and $\boldsymbol{x}_{ij}$ represented a vector of the measured covariates for $\text{cell}_{ij}$. The covariates were assumed to be measured without error and thus were not treated as random variables in our model. We used an inverse logit function because it returns continuous values from 0 to 1. Finally, we calculated the posterior probability of our random variables conditional on our data using the following Bayesian hierarchical model:
+
+$$
+\begin{aligned}
+\ [\boldsymbol{z}, \boldsymbol{\beta}, \boldsymbol{\alpha}, \boldsymbol{\eta}, \mu_{\alpha}, \sigma_{\alpha}, \mu_{\eta}, \sigma_{\eta} | \boldsymbol{n}, \boldsymbol{y}] & \propto \prod_{i = 1}^{890} \prod_{j = 1}^{32} [y_{ij} | n_{ij}, h(\eta_{ij}) z_{ij}] ~~~~~\text{(detection model)} \\
+& \times [z_{ij} | g(\alpha_j, \boldsymbol{\beta}, \boldsymbol{x}_{ij})] ~~~~~~~~~~~~~~~~\text{(occurrence model)} \\
+& \times [\alpha_j | \mu_{\alpha}, \sigma_{\alpha}] ~~~~~~~~~~~~~~~~~~~~~~~~~~\text{(occurrence hyperprior)} \\
+& \times [\eta_j | \mu_{\eta}, \sigma_{\eta}] ~~~~~~~~~~~~~~~~~~~~~~~~~~~\text{(detection hyperprior)} \\
+& \times [\boldsymbol{\beta}] [\mu_{\alpha}] [\sigma_{\alpha}] [\mu_{\eta}] [\sigma_{\eta}]  ~~~~~~~~~~~~~\text{(priors)}\\
+g(\alpha_j, \boldsymbol{\beta}, x_{ij}) & = \text{invlogit}(\alpha_j + \boldsymbol{\beta} \boldsymbol{x}_{ij}) \\
+h(\eta_{ij}) & = \text{invlogit}(\eta_j) \\
+\end{aligned} 
+$$
+
+<!-- $$ -->
+<!-- \begin{aligned} -->
+<!-- \ [P, \boldsymbol{z}, \boldsymbol{\beta}, \boldsymbol{\alpha}, \mu_{\alpha}, \sigma_{\alpha} | \boldsymbol{n}, \boldsymbol{y}] & \propto \prod_{i = 1}^{890} \prod_{j = 1}^{32} [y_{ij} | n_{ij}, h(\eta_j) z_{ij}] [z_{ij} | g(\alpha_j, \boldsymbol{\beta}, \boldsymbol{x}_{ij})] [\alpha_j | \mu_{\alpha}, \sigma_{\alpha}] [\eta_j | \mu_{\eta}, \sigma_{\eta}] [\boldsymbol{\beta}] [\mu_{\alpha}] [\sigma_{\alpha}] [\mu_{\eta}] [\sigma_{\eta}] \\ -->
+<!-- g(\alpha_j, \boldsymbol{\beta}, x_{ij}) & = \text{invlogit}(\alpha_j + \boldsymbol{\beta} \boldsymbol{x}_{ij}) \\ -->
+<!-- h(\eta_j) & = \text{invlogit}(\eta_j)  -->
+<!-- \end{aligned} \\  -->
+<!-- $$ -->
+
+with the following priors:
+
+$$
+\begin{aligned}
+\boldsymbol{\beta} & \sim \text{Normal}(0, 1) \\
+\alpha_{j} & \sim \text{Normal}(\mu_{\alpha}, \sigma_{\alpha}) \\
+\mu_{\alpha} & \sim \text{Normal}(-1, 1) \\
+\sigma_{\alpha} & \sim \text{Exponential}(1) \\
+\eta_j & \sim \text{Normal}(\mu_{\eta}, \sigma_{\eta}) \\
+\mu_{\eta} & \sim \text{Normal}(-1, 1) \\
+\sigma_{\eta} & \sim \text{Exponential}(1) \\
+\end{aligned}
+$$
+
+We used weakly regularizing priors for the slope coefficients ($\boldsymbol{\beta}$), noting that the environmental covariates were standardized to have a mean of 0 and standard deviation of 1 (Fig. S1A). We also chose weakly regularizing priors for the hyperpriors $\mu_{\alpha}$ (Fig. S1B)
+and $\sigma_{\alpha}$ (Fig. S1C) so that their resulting group-level intercepts ($\alpha_j$) for the true probability of occurrence peaked between 0 and 0.3, and then declined steadily towards 1 (Fig. S2A). We chose to put more weight on probabilities less than 0.5 because oases are, by definition, rare occurrences. The same priors were used for hyperpriors $\mu_{\eta}$ and $\sigma_{\eta}$, for the same reasons. We visualized our prior predictive distributions to ensure that the resulting relationships between the true probability of occurrence and a standardized coefficient were reasonable (Fig. S2B). 
+
+\newpage
+
+### Section S2. Supporting Figures
+
+```{r prior_check, include = FALSE}
+N <- 10000
+
+set.seed(109)
+# Beta
+b_prior <- rnorm(n = N, 0, 1)
+
+# Alpha_j
+mu_alpha <- rnorm(n = N, -1, 1)
+mu_alpha_inv <- inverse_logit(mu_alpha)
+sigma_alpha <- rexp(n = N, rate = 1)
+alpha_j_prior <- rnorm(n = N, mu_alpha, sigma_alpha)
+alpha_j_prior_inv <- inverse_logit(alpha_j_prior)
+
+# Quick checks
+dens(sigma_alpha, xlab = "Value", col = rangi2)
+par(mfrow = c(1,2))
+dens(mu_alpha, xlab = "Value", col = rangi2)
+dens(mu_alpha_inv, xlab = "Value", col = rangi2)
+dens(alpha_j_prior, xlab = "Value", col = rangi2)
+dens(alpha_j_prior_inv, xlab = "Value", col = rangi2)
+```
+
+```{r prior_check_plot, fig.width = 7, fig.height = 6}
+source("R/base_r_graphical_params.R")
+
+set_graph_pars(ptype = "panel3")
+
+dens(b_prior, xlab = "Value", col = rangi2)
+title(main = expression(beta), line = 1)
+mtext(text = "A", side=3, adj=-0.1)
+abline(v = 0, col = "gray", lty = 2)
+
+dens(mu_alpha, xlab = "Value", col = rangi2)
+title(main = expression(mu[alpha]), line = 1)
+mtext(text = "B", side=3, adj=-0.1)
+abline(v = 0, col = "gray", lty = 2)
+
+dens(sigma_alpha, xlab = "Value", col = rangi2)
+title(main = expression(sigma[alpha]), line = 1)
+mtext(text = "C", side=3, adj=-0.1)
+```
+
+Figure S1. Predictive distributions based on 10000 simulated draws for the priors from the hierarchical model. Parameters are on the logit scale. 
+
+\newpage
+
+```{r, fig.width = 6, fig.height = 3}
+set_graph_pars(ptype = "panel2")
+
+dens(alpha_j_prior_inv,  xlim = c(0, 1), 
+     xlab = expression("Probability of occurrence"~(psi)), 
+     col = rangi2, xaxt = "n")
+axis(side = 1, at = c(0, 0.5, 1), labels = c(0, 0.5, 1))
+title(main = expression(alpha[j]), line = 1)
+mtext(text = "A", side=3, adj=-0.1)
+abline(v = 0.5, col = "gray", lty = 2)
+
+x_grid <- seq(-2, 2, by = 0.1)
+i = 1
+y_pred <- alpha_j_prior[i] + b_prior[i]*x_grid
+y_pred_inv <- inverse_logit(y_pred)
+plot(x_grid, y_pred_inv, type = "l", col = rangi2, 
+     xlab = "Coefficient (standardized)", 
+     ylab = expression("Probability of occurrence"~(psi)), 
+     ylim = c(0, 1))
+title(main = expression('logit(y) = ' * alpha[j] * ' + ' * beta * x[ij]), line = 1)
+mtext(text = "B", side=3, adj=-0.1)
+
+for(i in 2:25){
+  y_pred <- alpha_j_prior[i] + b_prior[i]*x_grid
+  y_pred_inv <- inverse_logit(y_pred)
+  lines(x_grid, y_pred_inv, type = "l", col = rangi2)
+}
+```
+
+Figure S2. Predictive distributions based on 10000 simulated draws for the priors from the hierarchical model. In (A), the probability of oasis occurrence is back-transformed from the logit scale. In (B), 25 randomly selected relationships between the true probability of occurrence and a standardized covariate derived from the prior predictive distributions.
+
+\newpage
+
+### Section S3. JAGS model
+
+```{r jags_model, eval = FALSE, echo = TRUE}
+model{
+  
+  # priors for occurrence model
+  for(i in 1:nX){
+    beta[i] ~ dnorm(0, 1)
+  }
+  
+  # hyper-priors for occurrence model
+  mu.alpha ~ dnorm(-1, 1)
+  sigma.alpha ~ dexp(1)
+  tau.alpha <- 1/sigma.alpha^2
+  for(j in 1:y.n.sites){
+    alpha[j] ~ dnorm(mu.alpha, tau.alpha)
+  }
+  
+  # hyper-priors for detection model
+  mu.det ~ dnorm(-1, 1)
+  sigma.det ~ dexp(1)
+  tau.det <- 1 / sigma.det^2
+  for(j in 1:y.n.sites){
+    eta[j] ~ dnorm(mu.det, sigma.det)
+  } 
+  
+  # likelihood
+  for(i in 1:N){
+    
+    # occurrence model
+    logit(psi[i]) <- alpha[y.group[i]] + inprod(beta[], X[i, ] )
+    z[i] ~ dbern(psi[i])                                          
+    
+    # detection model
+    logit(p[i]) <- eta[y.group[i]]                                
+    mu.p[i] <- z[i] * p[i]                                        
+    y[i] ~ dbin(mu.p[i], n[i])
+    
+    # simulate new data, conditional on model parameters
+    y.new[i] ~ dbin(mu.p[i], n[i])                                
+    
+    # pearson chi-square discrepancy for a binomial
+    # e is small value to avoid division by zero
+    chi2b.data[i] <- ((y[i] - mu.p[i] * n[i]) / 
+      sqrt((mu.p[i] + e) * n[i] * (1 - mu.p[i] - e)))^2
+    chi2b.sim[i] <- ((y.new[i] - mu.p[i] * n[i]) / 
+      sqrt((mu.p[i] + e) * n[i] * (1 - mu.p[i] - e)))^2
+    
+    # freeman-tukey discrepancy for a binomial
+    ftd.data[i] <- (sqrt(y[i]) - sqrt(p[i] * z[i] * n[i]))^2 
+    ftd.sim[i] <-  (sqrt(y.new[i]) - sqrt(p[i] * z[i] * n[i]))^2 
+
+  }
+  
+  # bayesian p-value for chi-square discrepancy
+  d.chi2b.data <- sum(chi2b.data)
+  d.chi2b.sim <- sum(chi2b.sim)
+  p.chi2b <- step(d.chi2b.sim - d.chi2b.data)
+  
+  # bayesian p-value for freeman-tukey discrepancy
+  d.ftd.data <- sum(ftd.data)
+  d.ftd.sim <- sum(ftd.sim)
+  p.ftd <- step(d.ftd.sim - d.ftd.data)
+  
+}
+```
+
+\newpage
+
+### References
+
+MacKenzie, D. I., Nichols, J. D., Lachman, G. B., Droege, S., Andrew Royle, J., & Langtimm, C. A. (2002). Estimating site occupancy rates when detection probabilities are less than one. Ecology, 83(8), 2248-2255.
+
