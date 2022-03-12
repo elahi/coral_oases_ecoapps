@@ -35,7 +35,7 @@ library(rethinking)
 inverse_logit <-function(x) return(exp(x)/(1 + exp(x)))
 ```
 
-**Supporting Information**. Elahi, R., Edmunds, P.J., Gates, R.D., Kuffner, I.B., Barnes, B.B., Chollett, I., Courtney, T.A., Guest, J.R., Lenz, E.A., Toth, L.T., Viehman, T.S., Williams, I.D. 2022. Coral reef oases are consistently associated with high light attenuation. Ecological Applications.
+**Supporting Information**. Elahi, R., Edmunds, P.J., Gates, R.D., Kuffner, I.B., Barnes, B.B., Chollett, I., Courtney, T.A., Guest, J.R., Lenz, E.A., Toth, L.T., Viehman, T.S., Williams, I.D. 2022. Scale dependence of coral reef oases and their environmental correlates. Ecological Applications.
 
 ### Appendix S2. 
 
