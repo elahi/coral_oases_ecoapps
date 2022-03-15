@@ -1,0 +1,123 @@
+"","Ocean","Taxon","mean_cover"
+"1","Western Atlantic","Orbicella.franksi",1.81
+"2","Western Atlantic","Siderastrea.siderea",1.25
+"3","Western Atlantic","Porites.astreoides",1.16
+"4","Western Atlantic","Orbicella.faveolata",1.05
+"5","Western Atlantic","Montastraea.cavernosa",0.82
+"6","Western Atlantic","Millepora.spp",0.79
+"7","Western Atlantic","Pseudodiploria.strigosa",0.68
+"8","Western Atlantic","Colpophyllia.natans",0.42
+"9","Western Atlantic","Stephanocoenia.intersepta",0.34
+"10","Western Atlantic","Agaricia.agaricites",0.29
+"11","Western Atlantic","Porites.porites",0.24
+"12","Western Atlantic","Orbicella.annularis",0.23
+"13","Western Atlantic","Siderastrea.radians",0.1
+"14","Western Atlantic","Meandrina.meandrites",0.09
+"15","Western Atlantic","Madracis.auretenra",0.08
+"16","Western Atlantic","Madracis.decactis",0.06
+"17","Western Atlantic","Dichocoenia.stokesii",0.06
+"18","Western Atlantic","Acropora.cervicornis",0.06
+"19","Western Atlantic","Agaricia.lamarcki",0.05
+"20","Western Atlantic","Porites.furcata",0.05
+"21","Western Atlantic","Diploria.labyrinthiformis",0.05
+"22","Western Atlantic","Porites.divaricata",0.04
+"23","Western Atlantic","Solenastrea.bournoni",0.03
+"24","Western Atlantic","Orbicella.spp",0.03
+"25","Western Atlantic","Pseudodiploria.clivosa",0.02
+"26","Western Atlantic","Eusmilia.fastigiata",0.02
+"27","Western Atlantic","Acropora.palmata",0.02
+"28","Western Atlantic","Porites.spp",0.01
+"29","Western Atlantic","Agaricia.spp",0.01
+"30","Western Atlantic","Agaricia.humilis",0.01
+"31","Western Atlantic","Dendrogyra.cylindrus",0.01
+"32","Western Atlantic","Agaricia.fragilis",0.01
+"33","Western Atlantic","Madracis.spp",0.01
+"34","Western Atlantic","Agaricia.grahamae",0.01
+"35","Western Atlantic","Mycetophyllia.aliciae",0.01
+"36","Western Atlantic","Mussa.angulosa",0.01
+"37","Western Atlantic","Helioceris.cucullata",0.01
+"38","Western Atlantic","Oculina.diffusa",0.01
+"39","Western Atlantic","Scolymia.cubensis",0
+"40","Western Atlantic","Manicina.areolata",0
+"41","Western Atlantic","Siderastrea.spp",0
+"42","Western Atlantic","Favia.fragum",0
+"43","Western Atlantic","Mycetophyllia.ferox",0
+"44","Western Atlantic","Diploria.spp",0
+"45","Western Atlantic","Mycetophyllia.reesi",0
+"46","Western Atlantic","Agaricia.tenuifolia",0
+"47","Western Atlantic","Other.coral",0
+"48","Western Atlantic","Porites.colonensis",0
+"49","Western Atlantic","Solenastrea.spp",0
+"50","Western Atlantic","Tubastraea.coccinea",0
+"51","Western Atlantic","Scolymia.spp",0
+"52","Western Atlantic","Meandrina.jacksoni",0
+"53","Western Atlantic","Mycetophyllia.spp",0
+"54","Western Atlantic","Oculina.robusta",0
+"55","Western Atlantic","Meandrina.spp",0
+"56","Western Atlantic","Isophyllastrea.rigida",0
+"57","Western Atlantic","Colpophyllia.spp",0
+"58","Western Atlantic","Madracis.carmabi",0
+"59","Western Atlantic","Madracis.formosa",0
+"60","Western Atlantic","Mycetophyllia.danaana",0
+"61","Western Atlantic","Mycetophyllia.lamarckiana",0
+"62","Western Atlantic","Cladocora.abruscula",0
+"63","Western Atlantic","Isophyllia.sinuosa",0
+"64","Western Atlantic","Scleractinia.spp",0
+"65","Western Atlantic","Solenastrea.hyades",0
+"66","Pacific","Porites.massive",3.58
+"67","Pacific","Montipora.encrusting",3.27
+"68","Pacific","Pocillopora.sp",1.86
+"69","Pacific","Encrusting.hard.coral",1
+"70","Pacific","Acropora.branching",0.99
+"71","Pacific","Porites.encrusting",0.73
+"72","Pacific","Montipora.foliose",0.64
+"73","Pacific","Porites.branching",0.64
+"74","Pacific","Porites.non.massive",0.6
+"75","Pacific","Montipora.non.encrusting",0.44
+"76","Pacific","Porites.foliose",0.4
+"77","Pacific","Acropora.tabulate",0.39
+"78","Pacific","Massive.hard.coral",0.33
+"79","Pacific","Astreopora.sp",0.28
+"80","Pacific","Goniastrea.sp",0.27
+"81","Pacific","Favia.sp",0.24
+"82","Pacific","Montipora.branching",0.2
+"83","Pacific","Branching.hard.coral",0.11
+"84","Pacific","Pavona.sp",0.1
+"85","Pacific","Leptastrea.sp",0.09
+"86","Pacific","Foliose.hard.coral",0.09
+"87","Pacific","Turbinaria.sp",0.09
+"88","Pacific","Pavona.encrusting",0.09
+"89","Pacific","Galaxea.sp",0.09
+"90","Pacific","Isopora.sp",0.07
+"91","Pacific","Pavona.massive",0.07
+"92","Pacific","Montastraea.sp",0.06
+"93","Pacific","Free.living.hard.coral",0.06
+"94","Pacific","Favites.sp",0.05
+"95","Pacific","Platygyra.Leptoria.sp",0.05
+"96","Pacific","Non.scleractinian.hard.coral",0.05
+"97","Pacific","Lobophyllia.sp",0.05
+"98","Pacific","Platygyra.sp",0.04
+"99","Pacific","Millepora.sp",0.04
+"100","Pacific","Leptoria.sp",0.04
+"101","Pacific","Goniopora.Alveopora.sp",0.04
+"102","Pacific","Stylophora.sp",0.04
+"103","Pacific","Cyphastrea.sp",0.04
+"104","Pacific","Hydnophora.sp",0.03
+"105","Pacific","Coscinaraea.sp",0.02
+"106","Pacific","Fungia.sp",0.02
+"107","Pacific","Columnar.hard.coral",0.02
+"108","Pacific","Echinopora.sp",0.02
+"109","Pacific","Pachyseris.sp",0.02
+"110","Pacific","Acanthastrea.sp",0.02
+"111","Pacific","Diploastrea.sp",0.01
+"112","Pacific","Lobophyllia.Symphyllia.sp",0.01
+"113","Pacific","Merulina.sp",0.01
+"114","Pacific","Leptoseris.sp",0.01
+"115","Pacific","Psammocora.sp",0.01
+"116","Pacific","Heliopora.sp",0
+"117","Pacific","Pavona.foliose",0
+"118","Pacific","Hydrocoral",0
+"119","Pacific","Oulophyllia.sp",0
+"120","Pacific","Echinophyllia.sp",0
+"121","Pacific","Symphyllia.sp",0
+"122","Pacific","Euphyllia.sp",0

@@ -1,0 +1,238 @@
+---
+title: "Defining sub-jurisdictions"
+author: "Robin Elahi"
+date: "2 July 2021"
+endnote: no
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin=1in
+output:
+  pdf_document:
+    fig_caption: no
+    keep_tex: no
+    latex_engine: pdflatex
+  word_document: default
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE, cache = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      fig.path = 'figs/', cache.path = 'cache/graphics-', 
+                      fig.align = 'center', fig.width = 5, fig.height = 5, 
+                      fig.show = 'hold', cache = FALSE, par = TRUE)
+knitr::opts_knit$set(root.dir = "../")
+```
+
+```{r r_packages}
+library(tidyverse)
+library(knitr)
+theme_set(theme_bw(base_size = 12) + 
+            theme(panel.grid = element_blank(), 
+                  strip.background = element_blank())
+)
+```
+
+## Introduction
+
+Here I define the sub-jurisdictions used in the original analysis submitted to Ecological Applications, and then I propose changes to these definitions. The impetus for the proposed changes was:
+
+  1. 9 of the the sub-jurisdictions had fewer than 5 grid cells, and 16 subjurisdictions had fewer than 11 grid cells (making it difficult to visualize and interpret the results; possibly introduced noise into the model)
+  2. 16 sub-jurisdictions were removed for the sub-jurisdictional analysis (see EcoApps V1 supplement, Figure S8), due in part to the low grid cell count in many of them (but also due to the fact that some had zero population density, which I may address in a different way)
+  3. The large imbalance in grid cell counts in some sub-jurisdictions (e.g., Florida Keys in Florida; St. Thomas and St. John in the U S Virgin Islands)
+
+Note the following column definitions for this document:
+
+  - JURISDICTION: the jurisdiction used in the paper (in NOAA terms, a geographic priority area; and what reviewer 1 suggests I change to Region)
+  - REGION: what I call Sub-jurisdictions in the paper (and what reviewer 1 suggests I change to sub-region)
+  - REGION_SUB: these are the finest (spatial) reporting categories in the NOAA data I received from Shay Viehman and Ivor Williams. Many of these are finer than the sub-jurisdictions described in the 2014 NOAA report. I did not use these in the analysis, because some of these sub-jurisdictions cover very few grid cells (e.g., 2-5). 
+
+\newpage
+
+## Sub-jurisdictions in the original analysis
+
+```{r, echo = TRUE}
+dat <- read_csv("workspace/coral_total_cover_predictors_adjusted_regions.csv")
+```
+
+### Florida
+
+```{r}
+my_jurisdiction <- c("Florida")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+Note that the Florida Keys region (ie sub-jurisdiction) has about 3x as many reefs as the other two regions. For this reason, I split the Keys into upper / middle / lower sections, as described in Table 3 of NOAA report 2014. 
+
+### Puerto Rico
+
+```{r}
+my_jurisdiction <- c("PRICO")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+I did not change the original (NOAA) sub-region groupings in the first paper, and I will keep it the same for now. 
+
+### US Virgin Islands
+
+```{r}
+my_jurisdiction <- c("USVI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+There are many more reefs sampled in St Thomas and St John, as compared with St Croix. For this reason, I will create three new sub-jurisdictions - one for St Thomas, St John, and 'offshore' - this third category includes the NOAA sub_regions:
+
+  - MSR: mid-shelf reef
+  - EDGE: presumably reefs at the edge of the mid-shelf reef (my interpretation of the map)
+  - Sail Rock (reefs west of St Thomas)
+
+### Marianas
+
+```{r}
+my_jurisdiction <- c("MARIAN")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+My sub-jurisdictions (ie REGION) were the original REGION_SUBs - islands / atolls. But many of these only spanned 2-5 grid cells and were dropped from analysis at the sub-jurisdicional scale. 
+
+### Samoa
+
+```{r}
+my_jurisdiction <- c("SAMOA")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+My sub-jurisdictions (ie REGION) were the original REGION_SUBs - islands / atolls. But Tau, Ofu, and Olosega make geographic sense as a sub-jurisdiction (they compose the Manu'a Islands), and I will lump these together. 
+
+### Main Hawaiian Islands
+
+```{r}
+my_jurisdiction <- c("MHI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+My sub-jurisdictions (ie REGION) were the original REGION_SUBs - islands / atolls. I will leave these unchanged. 
+
+### Northwest Hawaiian Islands
+
+```{r}
+my_jurisdiction <- c("NWHI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+My sub-jurisdictions (ie REGION) were the original REGION_SUBs - islands / atolls. I will leave these unchanged. 
+
+\newpage
+
+## Proposed justification for these sub-jurisdictions (to go in the next manuscript)
+
+Note that I am using the new suggested terminology of Reviewer 1:
+  
+  - Cross-basin (new) = Global (old)
+  - Basin (new) = Ocean (old)
+  - Region (new) = Jurisdiction (old)
+  - Sub-region (new) = Sub-jurisdiction (old)
+
+Data from the United States National Association of Oceanic and Atmospheric Administration’s (NOAA) Coral Reef Conservation Program’s (CRCP) National Coral Reef Monitoring Program met these criteria and were accessed for a six-year period (2012-2017). The data were structured according to the following spatial hierarchy (Appendix S1: Table S1): (1) cross-basin (all data); (2) basin (n = 2; western Atlantic, Pacific; xx-xx × 106 km2); (3) region (n = 7; Florida, Puerto Rico, U.S. Virgin Islands, main Hawaiian islands [which spans Hawai'i to Ni'ihau], northwest Hawaiian islands [which spans French Frigate Shoals to Kure Atoll], Mariana islands [which include Guam and the Commonwealth of the Northern Mariana Islands], American Samoa; xx-xx × 104 km2, median = xx km2); (4) sub-region (n = 36; e.g., Tortugas, lower Keys, middle Keys, upper Keys, and southeast Florida in the Florida jurisdiction, as well as islands in most other jurisdictions; x-xx km2, median = xx km2); and (5) reef (n = 4123; 30 m transect). 
+
+Regional and sub-regional scales are most relevant to reef management, and are derived from the NOAA Coral Program (2014). Regions represent the Coral Program's priority geographic areas, and are also termed 'Jurisdictions' by NOAA; these are considered to be the highest level of reporting and NOAA annual reports are developed per jurisdiction. Sub-regions constitute the minimum reporting units for the NOAA program, and are also called 'Sub-jurisdictions'. These are spatial units small enough to be ecologically meaningful, but large enough to permit sufficient site replication. We followed the designation of sub-regions by NOAA in the publicly available data or consulted reports (e.g., Table S3; NOAA Coral Program 2014), except when the sub-regions covered very few grid cells (e.g., small islands in the Marianas Islands). In the U.S. Virgin Islands, we added a new sub-region to the existing St. Thomas, St. John, and St. Croix sub-regions. Namely, sites in the mid-shelf and Sail Rock areas south of the two islands were grouped into a 'St. Thomas - St. John offshore' sub-region. 
+
+NOAA Coral Program (2014). National Coral Reef Monitoring Plan. Silver Spring, MD, NOAA Coral Reef Conservation Program.
+
+\newpage
+
+## Proposed changes
+
+Here I present similar tables of the # of reefs in each sub-jurisdiction (REGION), but with the proposed changes.
+
+```{r}
+dat <- read_csv("workspace/coral_total_cover_predictors_adjusted_regions_2021.csv")
+```
+
+### Florida - **Ilsa, please advise**
+
+```{r}
+my_jurisdiction <- c("Florida")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+### Puerto Rico (no changes)
+
+```{r}
+my_jurisdiction <- c("PRICO")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+### US Virgin Islands - **Pete, please advise**
+
+```{r}
+my_jurisdiction <- c("USVI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+### Marianas - **Ilsa/Pete, please advise**
+
+```{r}
+my_jurisdiction <- c("MARIAN")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+### Samoa - **Ilsa/Pete, please advise**
+
+```{r}
+my_jurisdiction <- c("SAMOA")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+dat_sub %>% count(JURISDICTION, REGION) %>% kable()
+```
+
+### Main Hawaiian Islands (no changes)
+
+```{r}
+my_jurisdiction <- c("MHI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+### Northwest Hawaiian Islands (no changes)
+
+```{r}
+my_jurisdiction <- c("NWHI")
+dat_sub <- dat[dat$JURISDICTION %in% my_jurisdiction, ] %>% droplevels()
+dat_sub %>% count(JURISDICTION, REGION, REGION_SUB) %>% kable()
+```
+
+
+\newpage
+
+## Maps with proposed changes
+
+![](analysis_figs/map2021_Florida.pdf)
+
+![](analysis_figs/map2021_Puerto Rico.pdf)
+
+![](analysis_figs/map2021_US Virgin Islands.pdf)
+
+![](analysis_figs/map2021_Marianas.pdf)
+
+![](analysis_figs/map2021_Samoa.pdf)
+
+![](analysis_figs/map2021_Northwest Hawaiian Islands.pdf)
+
+![](analysis_figs/map2021_Main Hawaiian Islands.pdf)
