@@ -10,6 +10,8 @@ In press at Ecological Applications.
 
 To reproduce analyses and figures in manuscript, refer to folder 'analyse_oases_global'. 
 
+Please cite the above manuscript if the provided data are used for research or education. 
+
 ## Overview of folders in this repository
 
 ### 1_process_cortad
