@@ -10,6 +10,8 @@ In press at Ecological Applications.
 
 To reproduce analyses and figures in manuscript, refer to folder 'analyse_oases_global'. 
 
+For maps of the probability of oasis occurrence for all sub-regions, refer to folder 'map_subregions'. 
+
 Please cite the above manuscript if the provided data are used for research or education. 
 
 ## Overview of folders in this repository
@@ -76,6 +78,10 @@ Please cite the above manuscript if the provided data are used for research or e
 ### kml
 
   - kml files for Florida map
+
+### map_subregions
+
+  - supplemental maps of psi for subregions
 
 ### powell2_supplement
 
