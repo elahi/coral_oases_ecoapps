@@ -8,10 +8,34 @@ Robin Elahi, Peter J. Edmunds, Ruth D. Gates, Ilsa B. Kuffner, Brian B. Barnes, 
 
 In press at Ecological Applications. 
 
-Email elahi at stanford.edu with questions
+To reproduce analyses and figures in manuscript, refer to folder 'analyse_oases_global'. 
 
 ## Overview of folders in this repository
 
+### 1_process_cortad
+
+  - R scripts to process CORTAD data, used in preliminary analyses for comparison with remote sensing data processed by Barnes (e.g., SST, Kd490)
+  
+### 1_process_msec
+
+  - R scripts to process MSEC data from Yeager et al. 
+  
+### 1_process_noaa
+
+  - R scripts to process NOAA data received from collaborators (Viehman, Williams)
+  
+### 2_compile_data
+
+  - R scripts to compile all datasets
+  
+### 3_adjust_regions_2021  
+
+  - R scripts to adjust categorical designations of regions
+  
+### 3_prep_global_data_2021
+
+  - R scripts to prepare data for global analysis used for manuscript submitted to Ecological Applications
+  
 ### analyse_oases_global
 
   - R scripts to assign reef oases, explore the data, run the hierarchical occupancy model, extract output from the model, make figures and tables
@@ -35,10 +59,16 @@ Email elahi at stanford.edu with questions
 
 ### data_output
 
+  - cortad_: cortad SST data, in csv format
+  - cover_species_list.csv: coral cover, by species
   - df_samples.csv: summary table of sample sizes associated with each spatial scale
+  - noaa_ll_date.csv: lat-longs for noaa reef surveys
 
 ### ignore_folder (ignored on github due to large size)
 
+  - ecological data from NOAA (Viehman, Williams)
+  - storm data (Chollett)
+  - NASA remote sensing data (Barnes)
   - model_rds: MCMC results from JAGS models 
   
 ### kml
@@ -59,4 +89,4 @@ Email elahi at stanford.edu with questions
   
 ### workspace
 
-  - data (and metadata) necessary to recreate all of the analyses and figures in the manuscript
+  - data necessary to recreate all of the analyses and figures in the manuscript
