@@ -35,3 +35,7 @@ dat2 %>% count(JURISDICTION, REGION)
 dat2 <- dat2 %>% 
   mutate(Ocean = OCEAN, `Sub-jurisdiction` = REGION)
 
+## Save file for stats class in 2023
+# names(dat2)
+# dat2 <- dat2 %>% select(-X)
+# write.csv(dat2, "workspace/coral_total_cover_and_predictors_zed_2022.csv")
