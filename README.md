@@ -2,19 +2,21 @@
 
 Data and code used in:
 
-Scale dependence of coral reef oases and their environmental correlates
+Elahi, R., Edmunds, P.J., Gates, R.D., Kuffner, I.B., Barnes, B.B., Chollett, I., Courtney, T.A., Guest, J.R., Lenz, E.A., Toth, L.T. and Viehman, T.S., 2022. Scale dependence of coral reef oases and their environmental correlates. Ecological Applications, p.e2651.
 
-Robin Elahi, Peter J. Edmunds, Ruth D. Gates, Ilsa B. Kuffner, Brian B. Barnes, Iliana Chollett, Travis A. Courtney, James R. Guest, Elizabeth A. Lenz, Lauren T. Toth, T. Shay Viehman, Ivor D. Williams
+https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.2651
 
-In press at Ecological Applications. 
+This repository is also permanently available here:
 
-To reproduce analyses and figures in manuscript, refer to folder 'analyse_oases_global'. 
-
-For maps of the probability of oasis occurrence for all sub-regions, refer to folder 'map_subregions'. 
+https://purl.stanford.edu/zb133qp4049
 
 Please cite the above manuscript if the provided data are used for research or education. 
 
 ## Overview of folders in this repository
+
+To reproduce analyses and figures in manuscript, refer to folder 'analyse_oases_global'. 
+
+For maps of the probability of oasis occurrence for all sub-regions, refer to folder 'map_subregions'. 
 
 ### 1_process_cortad
 
